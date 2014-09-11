@@ -1,0 +1,8 @@
+/.gem/
+/Gemfile.lock
+/pkg/
+/cache/
+/*.gem
+.DS_Store
+.env
+.easytree
