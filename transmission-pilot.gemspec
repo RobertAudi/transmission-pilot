@@ -1,8 +1,6 @@
-require File.expand_path(File.join("lib","transmission-pilot","version"))
-
 Gem::Specification.new do |spec|
   spec.name          = "transmission-pilot"
-  spec.version       = TransmissionPilot::VERSION
+  spec.version       = File.read("VERSION")
   spec.author        = "Robert Audi"
   spec.email         = "robert.audii@gmail.com"
   spec.homepage      = "https://github.com/RobertAudi/transmission-pilot"
