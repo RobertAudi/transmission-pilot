@@ -19,11 +19,8 @@ module TransmissionPilot
           user_config = Psych.load(File.read(CONFIG_FILE))
 
           if user_config.is_a?(Hash)
-            # Symbolize keys
-            user_config.inject({}){|memo,(k,v)| memo[k.to_sym] = v; memo}
-
-            @config.merge(user_config)
-            @config.gsub!(/\Ahttps?:\/\//, "")
+            @config.merge(user_config.symbolized)
+            @config[:host].gsub!(/\Ahttps?:\/\//, "")
           end
         end
       end
